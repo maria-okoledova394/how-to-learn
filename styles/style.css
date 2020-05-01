@@ -13,6 +13,8 @@
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
+  position: relative;
+  background-color: #f2f2f2;
   /* выше установили ограничения для секции */
 }
 
@@ -20,6 +22,56 @@
 .header__square-pic {
   height: 568px;
   width: 568px;
+}
+
+div {
+  border: 1px solid red;
+}
+
+.logo {
+
+  width: 183px;
+  height: 32px;
+  background-image: url(../images/logo_place_header.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* не написано background-position: align-self */
+}
+
+.logo_place_header {
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 64px;
+  z-index: 1; /* а оно вообще надо*/
+}
+
+.header__flex-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 730px;
+  height: 100%;
+}
+
+.header_title{
+  /*align-self: center;*/
+  margin-left: 64px;
+  line-height: 96px;
+  font-size: 102px;
+  font-weight: bold;
+}
+
+.header__main-illustration {
+  background-image: url(../images/header-image.png);
+}
+
+.header__square-pic {
+  width: 568px;
+  height: 568px;
+  background-color: #2f80ed;
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 64px;
 }
 
 /* и элемента с модификатором вида ключ-значение */
