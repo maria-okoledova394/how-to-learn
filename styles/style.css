@@ -24,24 +24,23 @@
   width: 568px;
 }
 
-div {
+ div {
   border: 1px solid red;
 }
 
-.logo {
 
-  width: 183px;
-  height: 32px;
-  background-image: url(../images/logo_place_header.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
+.logo {
+  background-repeat: no-repeat; /* почему только с этим картинка не обрезается */
   /* не написано background-position: align-self */
 }
 
 .logo_place_header {
+  background-image: url(../images/logo_place_header.svg);
+  width: 183px;
+  height: 32px;
   position: absolute;
-  margin-top: 20px;
-  margin-left: 64px;
+  top: 30px;
+  left: 64px;
   z-index: 1; /* а оно вообще надо*/
 }
 
@@ -51,6 +50,7 @@ div {
   justify-content: center;
   width: 730px;
   height: 100%;
+  flex-wrap: wrap;
 }
 
 .header_title{
@@ -61,8 +61,29 @@ div {
   font-weight: bold;
 }
 
+.header__subtitle{
+  position: absolute;
+  bottom: 30px;
+  left: 64px;
+  width: 388px;
+  z-index: 1; /* а оно вообще надо*/
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.header__link{
+  color: #2f80ed;
+  text-decoration: none;
+}
+
 .header__main-illustration {
-  background-image: url(../images/header-image.png);
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 765px;
+  height: 608px;
+  object-fit: cover;
 }
 
 .header__square-pic {
@@ -70,14 +91,246 @@ div {
   height: 568px;
   background-color: #2f80ed;
   position: absolute;
-  margin-top: 20px;
-  margin-left: 64px;
+  top: 64px;
+  right: 0px;
+}
+
+.content{
+  position: relative;
+  border: 1px solid red;
+}
+
+.description {
+  /*border: 1px solid red;*/
+  position: relative;
+}
+
+.two-columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+  margin-top: 100px;
+  flex-wrap: wrap;
+}
+
+.two-columns__brief{
+  width: 175px;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  margin-top: 0px;
+  color: #2f80ed;
+}
+
+.two-columns__main-text{
+  width: 80%;
+  min-width: 784px; /* todo: настроить min-height */
 }
 
 /* и элемента с модификатором вида ключ-значение */
-.table__cell_theme_dark {
+
+
+.two-columns__paragraph{
+  margin-bottom: 30px;
+  margin-top: 0px;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.two-columns__paragraph:nth-of-type(3n) {
+  margin-bottom: 0px;
+}
+.two-columns__span-accent{
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.digits{
+  margin-top:100px;
+  margin-bottom: 100px;
+}
+
+.section-title{
+  text-align: center;
+  line-height: 69px;
+  font-size: 60px;
+  font-weight: bold;
+  width: 60%;
+  margin: auto;
+
+}
+
+
+.section-subtitle {
+  text-align: center;
+  margin-top: 20px;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  width: 60%;
+  margin: 20px auto 0px;
+}
+
+.table{
+  display: flex;
+  width: 1100px;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+
+
+.table__cell_theme_light {
+  width: 250px;
+  margin-top: 60px;
+}
+
+.table__heading {
+  margin-top: 0px;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+.table__text{
+  margin-top: 20px;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.feinman {
+  position: relative;
+  background-color: #f2f2f2;
+  height: 790px;
+}
+
+
+.feinman__title {
+  position: relative;
+  width: 648px;
+  margin: 100px auto 0px;
+  text-align: center;
+  line-height: 1.15;
+  font-size: 120px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.feinman__subtitle {
+  position: relative;
+  margin: 70px auto 0px;
+  text-align: center;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  z-index: 1;
+}
+
+.feinman__link{
+  position: absolute;
+  right: 48px;
+  top: 50%;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  color: black;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.feinman__background-image{
+  position: absolute;
+  width: 867px;
+  height: 637px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 0;
+}
+
+.kaufman{
+  padding-bottom: 90px;
+  background-color: #1f1f1f;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-title_theme_dark{
+  margin-top: 90px;
+  color: white;
+  position: relative;
+  z-index: 1;
+
+}
+
+.section-subtitle_theme_dark{
+  margin-top: 0px;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.table_theme_dark{
+  position: relative;
+  z-index: 1;
+}
+
+.table__cell_theme_dark{
   width: 200px;
   color: white;
   margin-right: 0;
   margin-top: 80px;
+}
+
+
+.kaufman__triangle{
+  position: absolute;
+  width: 877px;
+  height: 877px;
+  top: 0px;
+  right: -210px;
+  z-index: 0;
+}
+
+.footer{
+  background-color: #1f1f1f;
+  min-height: 290px;
+  /*position: relative;*/
+  padding-top: 60px;
+
+}
+
+.footer__columns{
+  margin-left: auto;
+  margin-right: auto;
+  height: 250px;
+  width: 90%;
+  justify-content: space-between;
+  display: flex;
+  flex-basis: 711px;
+}
+
+.footer__columns_content_copyright{
+  width: 50%;
+}
+
+.logo_place_footer{
+  width: 183px;
+  height: 35px;
+  background-image: url(../images/logo_place_footer.svg);
+}
+
+.footer__author{
+  color: white;
+  margin-bottom: 18px;
+}
+
+.footer__column-link{
+  display: block;
 }
