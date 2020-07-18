@@ -144,7 +144,7 @@
   font-size: 60px;
   font-weight: bold;
   width: 60%;
-  
+  margin: 0 auto 0;
 }
 
 .section-subtitle {
@@ -153,6 +153,7 @@
   font-size: 24px;
   font-weight: normal;
   width: 60%;
+  margin: 20px auto 0;
 }
 
 .table {
@@ -162,45 +163,28 @@
   justify-content: space-between;
   align-items: flex-start;
   align-items: stretch;
+  margin: 0 auto 0;
 }
 
 .table__heading {
   line-height: 1.15;
   font-size: 24px;
   font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .table__text {
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
-}
-
-.section-title_theme_light {
-  margin: 0 auto 0;
-}
-
-.section-subtitle_theme_light {
-  margin: 20px auto 0;
-}
-
-.table_theme_light {
-  margin: 0 auto 0;
-}
-
-.table__cell_theme_light {
-  width: 250px;
-  margin-top: 60px;
-}
-
-.table__heading_theme_light {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.table__text_theme_light {
   margin-top: 20px;
   margin-bottom: 0;
+}
+
+.table__cell {
+  width: 250px;
+  margin-top: 60px;
 }
 
 .feynman {
